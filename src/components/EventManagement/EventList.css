@@ -1,0 +1,25 @@
+.event-list-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.event-list-container h1 {
+    color: #333;
+}
+
+.event-list-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-list-container li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}

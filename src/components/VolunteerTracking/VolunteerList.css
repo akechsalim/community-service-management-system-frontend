@@ -1,0 +1,15 @@
+.volunteer-list-container {
+    padding: 20px;
+}
+
+#volunteer-items {
+    list-style-type: none;
+}
+
+#volunteer-items li {
+    margin-bottom: 15px;
+}
+
+.add-volunteer-form {
+    margin-top: 20px;
+}
