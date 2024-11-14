@@ -18,15 +18,19 @@ const VolunteerList = () => {
     }, []);
 
     const handleAddVolunteer = () => {
-        const newVolunteer = {name, role, contactInfo};
-        api.post('/volunteers', newVolunteer)
-            .then((response) => {
-                setVolunteers([...volunteers, response.data]);
-                setName('');
-                setRole('');
-                setContactInfo('');
-            })
-            .catch((error) => console.error("Error adding volunteer:", error));
+        if (name && role && contactInfo) {
+            const newVolunteer = { name, role, contactInfo };
+            api.post('/volunteers', newVolunteer)
+                .then((response) => {
+                    setVolunteers([...volunteers, response.data]);
+                    setName('');
+                    setRole('');
+                    setContactInfo('');
+                })
+                .catch((error) => console.error("Error adding volunteer:", error));
+        } else {
+            alert("Please fill in all fields.");
+        }
     };
 
     return (
