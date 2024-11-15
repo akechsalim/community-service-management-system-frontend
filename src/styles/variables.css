@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #a8d5ba; /* Subtle green */
+    --primary-green-hover: #88c89b; /* Slightly darker green for hover */
+    --primary-green-text: #264d3b; /* Darker green for text */
+    --secondary-color: #6c757d; /* Gray */
+    --hover-color: #218838; /* Dark green for intense hover */
+    --background-color: #f4f4f4; /* Light gray */
+    --text-color: #ffffff; /* White for text */
+
+    --delete-bg: #f8d7da; /* Light red for delete button */
+    --delete-text: #721c24; /* Darker red for text */
+    --delete-hover-bg: #f5c6cb; /* Slightly darker red on hover */
+    --delete-hover-text: #491217;
+}

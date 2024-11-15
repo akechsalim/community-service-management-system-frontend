@@ -21,6 +21,18 @@ const EventList = () => {
                         <p>{event.description}</p>
                         <p>Date: {event.date}</p>
                         <p>Location: {event.location}</p>
+                        <h4>Tasks</h4>
+                        <ul>
+                            {event.tasks && event.tasks.map((task) => (
+                                <li key={task.id}>{task.name}</li>
+                            ))}
+                        </ul>
+                        <h4>Volunteers</h4>
+                        <ul>
+                            {event.volunteers && event.volunteers.map((volunteer) => (
+                                <li key={volunteer.id}>{volunteer.name}</li>
+                            ))}
+                        </ul>
                     </li>
                 ))}
             </ul>

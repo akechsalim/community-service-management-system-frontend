@@ -6,10 +6,22 @@
 /*  height: 40vmin;*/
 /*  pointer-events: none;*/
 /*}*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
 .content {
-  margin-left: 50px; /* or more, depending on layout */
-  padding: 20px;
-  transition: margin-left 0.3s ease-in-out;
+    margin-top: 60px; /* Add space for the fixed navbar */
+    padding: 20px;
+    background-color: #fff;
+    min-height: calc(100vh - 60px);
+    border-left: 4px solid var(--primary-color);/* Ensure content fills the screen */
+}
+
+.content > * {
+    margin-bottom: 20px;
 }
 
 /*@media (prefers-reduced-motion: no-preference) {*/

@@ -1,0 +1,32 @@
+/* src/styles/pageBackgrounds.css */
+.page {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--primary-green-text);
+}
+
+.home-page {
+    background-image: url('/public/images/home-background.jpg');
+}
+
+.events-page {
+    background-image: url('/public/images/events-background.jpg');
+}
+
+.tasks-page {
+    background-image: url('/public/images/tasks-background.webp');
+}
+
+.volunteers-page {
+    background-image: url('/public/images/volunteers-background.webp');
+}
+body {
+    margin: 0;
+    padding: 0;
+}

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import api from '../../services/api';
 import './VolunteerList.css';
+import '../../styles/global.css'
 
 const VolunteerList = () => {
     const [volunteers, setVolunteers] = useState([]);
@@ -17,6 +18,12 @@ const VolunteerList = () => {
             .catch((error) => console.error("Error fetching volunteers:", error));
     }, []);
 
+    const fetchVolunteers = () => {
+        api.get('/volunteers')
+            .then((response) => setVolunteers(response.data))
+            .catch((error) => console.error("Error fetching volunteers:", error));
+    };
+
     const handleAddVolunteer = () => {
         if (name && role && contactInfo) {
             const newVolunteer = { name, role, contactInfo };
@@ -32,6 +39,14 @@ const VolunteerList = () => {
             alert("Please fill in all fields.");
         }
     };
+    const handleDelete = (id) => {
+        api.delete(`/volunteers/${id}`)
+            .then(() => {
+                alert("Volunteer deleted successfully!");
+                fetchVolunteers(); // Refresh the list
+            })
+            .catch((error) => console.error("Error deleting volunteer:", error));
+    };
 
     return (
         <div className="volunteer-list-container">
@@ -42,6 +57,7 @@ const VolunteerList = () => {
                         <h3>{volunteer.name}</h3>
                         <p>Role: {volunteer.role}</p>
                         <p>Contact: {volunteer.contactInfo}</p>
+                        <button className="delete" onClick={() => handleDelete(volunteer.id)}>Delete</button>
                     </li>
                 ))}
             </ul>

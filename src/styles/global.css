@@ -1,0 +1,23 @@
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--primary-green-hover);
+}
+button.delete {
+    background-color: var(--delete-bg); /* Light red */
+    color: var(--delete-text);;          /* Darker red for text */
+}
+
+button.delete:hover {
+    background-color: var(--delete-hover-bg); /* Darker red on hover */
+    color: var(--delete-hover-text);          /* Even darker red text on hover */
+}
