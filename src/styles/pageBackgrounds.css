@@ -12,19 +12,19 @@
 }
 
 .home-page {
-    background-image: url('/public/images/home-background.jpg');
+    /*background-image: url('/public/images/home-background.jpg');*/
 }
 
 .events-page {
-    background-image: url('/public/images/events-background.jpg');
+    /*background-image: url('/public/images/events-background.jpg');*/
 }
 
 .tasks-page {
-    background-image: url('/public/images/tasks-background.webp');
+    /*background-image: url('/public/images/tasks-background.webp');*/
 }
 
 .volunteers-page {
-    background-image: url('/public/images/volunteers-background.webp');
+    /*background-image: url('/public/images/volunteers-background.webp');*/
 }
 body {
     margin: 0;
