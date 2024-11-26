@@ -1,25 +1,306 @@
-.event-list-container {
+/* EventList.css */
+body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.event-list-container h1 {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
     color: #333;
 }
 
-.event-list-container ul {
-    list-style-type: none;
-    padding: 0;
+.event-list-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.event-list-container li {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
+.event-list-container h1 {
+    text-align: center;
+    color: #2c7a7b;
+    margin-bottom: 20px;
 }
+
+.event-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.event-card {
+    background: #e6fffa;
+    border: 1px solid #b2f5ea;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-card h2 {
+    color: #2c7a7b;
+    margin-bottom: 10px;
+}
+
+.event-card .description {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin: 5px 0;
+}
+
+/* Event Form Styling */
+.event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-form input,
+.event-form textarea,
+.event-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+    outline: none;
+    border-color: #2c7a7b;
+    box-shadow: 0 0 5px rgba(44, 122, 123, 0.5);
+}
+
+.event-form button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-form button:hover {
+    background: #008000;
+}
+
+.delete-button {
+    background: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.delete-button:hover {
+    background: #e1e1e1;
+    border-color: #aaa;
+}
+
+.signup-button, .details-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover, .details-button:hover {
+    background: #008000;
+}
+
+.event-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-modal button {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.success-message {
+    color: #2f855a;
+    background: #f0fff4;
+    padding: 10px;
+    border: 1px solid #38a169;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.details-button {
+    background-color: #1da1f2; /* Blue */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.assign-button {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #F08080; /* Subtle red */
+    color: #721c24;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #f5c6cb; /* Slightly darker red on hover */
+}
+
+.edit-button {
+    background-color: #FFD700; /* Orange color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #cc8400; /* Darker orange on hover */
+}
+
+/* The modal background */
+.edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show the modal when editingEvent is set */
+.edit-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Form inputs styling */
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons styling */
+.modal-content button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Cancel button */
+.modal-content button[type="button"] {
+    background-color: #F08080; /* Red for cancel */
+}
+
+/* Styling for form header */
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+/* Add smooth transition for modal */
+.edit-modal.open .modal-content {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Animation for sliding in the modal */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+

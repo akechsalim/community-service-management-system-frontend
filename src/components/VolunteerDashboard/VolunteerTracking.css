@@ -1,0 +1,198 @@
+/* Volunteer Tracking Container */
+.volunteer-tracking-container {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+h2 {
+    text-align: center;
+    color: #2e7d32;
+}
+
+/* Heading */
+.volunteer-tracking-container h1 {
+    color: #2e7d32; /* Green heading */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="number"], textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    /*border-bottom: 1px solid #ddd;*/
+}
+
+th {
+    background: #e6fffa;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+td {
+    background: #e6fffa;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.volunteer-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+    background-color: #F08080;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+.no-contributions {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
+.volunteer-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.volunteer-form input {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.volunteer-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50; /* Primary green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.volunteer-form button:hover {
+    background-color: #388e3c; /* Darker green */
+}
+
+/* Table Styles */
+.volunteer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-table thead {
+    background-color: #2e7d32; /* Green header */
+    color: white;
+}
+
+.volunteer-table th,
+.volunteer-table td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.volunteer-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.volunteer-table tr:hover {
+    background-color: #e8f5e9; /* Light green highlight */
+}
+
+/* Action Button Styles */
+.action-button {
+    background-color: #e53935; /* Red for delete */
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #d32f2f; /* Darker red */
+}
