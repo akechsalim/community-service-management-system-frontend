@@ -16,7 +16,16 @@ const LoginPage = ({ onLogin }) => {
         setError("");
 
         try {
-            const response = await axios.post("http://localhost:8080/api/auth/login", credentials);
+            const response = await axios.post(
+                "http://localhost:8080/api/auth/login",
+                credentials,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    withCredentials: true, // Ensure cookies are sent for CORS
+                }
+            );
             const { token, role } = response.data;
             onLogin(token, role); // Pass token and role to parent
         } catch (err) {
